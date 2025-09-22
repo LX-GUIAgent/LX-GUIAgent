@@ -4,18 +4,25 @@
 
 [![Code](https://img.shields.io/badge/V1-Code-green)](https://github.com/LX-GUIAgent/LX-GUIAgent)
 
-## ✨ Overview  
+## ✨ Overview
 
 LX-GUIAgent is an advanced GUI Agent developed by China Mobile's LingXi, featuring innovative Planner-Grounder-Reflector frameworks:
 
 
+### 🚀 Upgrades [2025.09.22]
+
+* **Enhanced grounding methodology** : Resolved element localization errors when multiple elements share identical names on the page by prompt enhancement. Constraining grounding outputs to only clickable objects within the A11y tree structure.
+* **Improved temporal processing** : Enhanced the agent's ability to recognize and convert date/time formats, resulting in more accurate temporal reasoning and task execution.
+* Add a `keyboard_enter` action to press the Enter key and input a blank line.
+* **update score 75% to 79.3%** end-to-end success rate in [AndroidWorld](https://github.com/google-research/android_world)
+
 ### 🎯 Highlights
+
 - Three-phase collaborative framework (**Planner + Grounder + Reflector**)
 - Systematic task execution for complex workflows
 - Modular design for flexible adaptation
 - Independent optimization of components
-- **75%** end-to-end success rate in [AndroidWorld](https://github.com/google-research/android_world)  
-
+- **75%** end-to-end success rate in [AndroidWorld](https://github.com/google-research/android_world)
 
 ## ✨ Architecture
 
@@ -23,13 +30,12 @@ LX-GUIAgent is an advanced GUI Agent developed by China Mobile's LingXi, featuri
 
 <img src="./images/LX-GUIAgent-workflow.png" alt="LX-GUIAgent Workflow" style="max-width: 80%; display: block; margin: 0 auto;">
 
-
-
 ## ✨ About LX-GUIAgent
 
 **LX-GUIAgent** leverages a Planner-Grounder-Reflector architecture to address complex GUI automation scenarios. The agent features a clear separation of action planning, element grounding, and reflector modules. Operational rules, best practices, and domain-specific guidelines are systematically integrated into each module, significantly enhancing the agent's stability and accuracy.
 
 The key innovations include:
+
 1. **App Recognizer**: Automatically identifies target applications from user task descriptions.
 2. **Operator Usage Guide Knowledge Base**: Provides tips and scenarios for using various operators, helping optimize their application in different contexts.
 3. **App Usage Guide Knowledge Base**: Retrieves structured Usage_Notes (e.g. special operation paths, icon semantics, or domain-specific constraints) for the identified APP.
@@ -44,14 +50,12 @@ These notes are injected into the Planner’s prompt context, enabling:
 - ✅ Robustness Enhancement: Addresses model limitations by leveraging external knowledge(eg. type with clear_text True to clear input field, prefer search other than scroll, prefer to open_app other than click app icon.).
 - ✅ Rapid Adaptation: Enables fast deployment to new applications without the need for additional training.
 
-
 ## ✨ Technical Implementation
 
 **Core code (lx_guiagent)**
 
-- `lx_guiagent.py` - Core agent framework  
+- `lx_guiagent.py` - Core agent framework
 - `lx_guiagent_utils.py` - Core tools and utilities
-
 
 **Evaluation Suite (androidworld_eval_result)**
 
@@ -61,9 +65,7 @@ These notes are injected into the Planner’s prompt context, enabling:
 **Run Scripts (scripts)**
 
 1. Download and install [AdroidWorld](https://github.com/google-research/android_world) environment.
-
 2. copy agents/*.py to AndroidWorld `agents` directory
-
 3. Edit _`get_agent` function in `run.py` of AndroidWrold to set your model and agent.
 
 ```python
@@ -75,10 +77,10 @@ elif _AGENT_NAME.value == 'LX_GUIAgent':
 
 4. `cd androidworld ` and Run `python run.py --agent LX_GUIAgent` to start evaluation.
 
-## ✨ Case Studies  
+## ✨ Case Studies
 
 ### AndroidWorld Benchmark Tasks
 
-| Difficulty | User Instruction | Demo Link                                                               |
-|------------|-------------|-------------------------------------------------------------------------|
-| Easy       | Record an audio clip using Audio Recorder app and save it. | <img src="images/AudioRecorderRecordAudio.gif" alt="AudioRecorderRecordAudio" width="400"> |
+| Difficulty | User Instruction                                           | Demo Link                                                                                      |
+| ---------- | ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| Easy       | Record an audio clip using Audio Recorder app and save it. | `<img src="images/AudioRecorderRecordAudio.gif" alt="AudioRecorderRecordAudio" width="400">` |

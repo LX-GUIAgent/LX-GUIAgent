@@ -1,18 +1,19 @@
+       
 difficulty                            easy medium  hard
-tags
-complex_ui_understanding              0.50    0.8  0.14
-data_edit                             1.00   0.43   0.0
-data_entry                            0.87    0.6  0.33
+tags                                                   
+complex_ui_understanding              1.00    0.8  0.29
+data_edit                             0.91   0.57   0.0
+data_entry                            1.00    0.8  0.33
 game_playing                          0.50      -     -
-information_retrieval                 0.57   0.89   0.0
-math_counting                         0.00   0.67  0.67
-memorization                          1.00    0.0  0.25
-multi_app                             1.00    0.0  0.33
-parameterized                         0.86   0.68  0.44
-repetition                            1.00    0.4   0.4
-requires_setup                        1.00   0.33   0.0
-screen_reading                        0.75   0.33  0.33
-search                                0.91    0.8   0.5
-transcription                         0.50    0.5   0.0
+information_retrieval                 0.86   0.89  0.33
+math_counting                         1.00   0.67   0.0
+memorization                          1.00    1.0   0.0
+multi_app                             1.00    1.0  0.33
+parameterized                         0.93   0.79  0.33
+repetition                            0.50    0.4   0.4
+requires_setup                        1.00   0.67   0.0
+screen_reading                        0.92    1.0  0.22
+search                                0.91    1.0  0.17
+transcription                         1.00    1.0   0.0
 untagged                              0.80    1.0     -
 verification                          1.00      -     -
