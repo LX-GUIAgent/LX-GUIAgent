@@ -36,13 +36,12 @@ LX-GUIAgent is an advanced GUI Agent developed by China Mobile's LingXi, featuri
 
 The key innovations include:
 
-1. **App Recognizer**: Automatically identifies target applications from user task descriptions.
-2. **Operator Usage Guide Knowledge Base**: Provides tips and scenarios for using various operators, helping optimize their application in different contexts.
-3. **App Usage Guide Knowledge Base**: Retrieves structured Usage_Notes (e.g. special operation paths, icon semantics, or domain-specific constraints) for the identified APP.
-4. **Knowledge-Augmented Planner Prompting**: Dynamically integrates Usage_Notes into planning context for precise step-by-step reasoning.
-5. **Reflector Module**: Refines and summarizes the execution results, providing clear feedback to users.
-6. **Grounder Module**: Achieves precise target element localization by A11Tree structure analysis with action histories.
-7. **Chinese-First Prompt Design**: All prompt content is written in Chinese to optimize performance for Chinese language models and ensure better understanding of task context.
+1. App Recognizer: Automatically identify target applications from user task descriptions
+2. APP User Guide Knowledge Base: Provides the background knowledge needed for the app to help planners plan tasks (e.g. special paths, icon semantics, or domain-specific constraints)
+3. Planner: Plan the next plan to be executed according to user tasks, historical operation information, current interface screenshots, related APP information, etc
+4. Grounder: Combine page screenshots and A11y Tree for page analysis to achieve accurate target element positioning
+5. Reflector: Summarizes the interface changes, whether the current steps are executed successfully, and the next operation suggestions based on the comparison of interface screenshot changes before and after the operation, helping Planner update the plan
+6. Chinese-First Prompt Design: All prompt content is written in Chinese to optimize the performance of Chinese language models and ensure a better understanding of task context.
 
 These notes are injected into the Planner’s prompt context, enabling:
 
